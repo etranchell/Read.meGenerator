@@ -71,7 +71,7 @@ const questions = [
     {
         type: 'list',
         name: 'licenseChoice',
-        message: 'What license does your project have, if any? Go to choosealicense.com for more information on licenses.',
+        message: 'What license does your project have, if any?',
         choices: [
             'Apache 2.0', 
             'MIT', 
