@@ -29,32 +29,12 @@ function renderLicenseSection(license) {
 }
 };
 
-function renderLinkSection(siteLink) {
-  if (!siteLink) {
-    return "";
-  } else {
-    return `
-    ### Live Site
-    [Click to see the live site](${siteLink})`
-  }
-};
-
-function renderDemo(demoLink) {
-  if (!demoLink) {
-    return "";
-  } else {
-    return `
-    ### Demo
-    ![Demo]9${demoLink})`
-  }
-};
-
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   //return `# ${data.title}
   // console.log(data)
-  const { github, licenseChoice, confirmLiveLink, liveSiteLink, siteDemoLink, ...info } = data;
+  const { github, licenseChoice, ...info } = data;
 
   return `
   # ${info.projectTitle}
@@ -70,9 +50,7 @@ function generateMarkdown(data) {
   ## Project Description
   ${info.description}
   ${renderLicenseSection(licenseChoice)} 
-  ${renderLinkSection(liveSiteLink)}
-  ${renderDemo(siteDemoLink)}
-
+ 
   ## Installation 
   ${info.installationInstructions}
 
